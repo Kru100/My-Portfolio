@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-image: linear-gradient(to right, rgb(100, 10, 120), rgb(78, 29, 193));
+        }
+        nav {
+            background-color: black;
+            height: 75px;
+            align-items: left;
+            opacity: 70%;
+            color: aliceblue;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        nav h1 {
+            padding-top: 10px;
+            font-family: cursive;
+        }
+        li{
+            list-style: none;
+        }
+        ul{
+            color:  rgb(85, 248, 229);
+            font-family: cursive;
+            font-size: 20px;
+        }
+        .container{
+            display: flex;
+        }
+        .btn-5 {
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+            font-size: 17px;
+            color: rgb(85, 248, 229);
+          background: linear-gradient(to left,rgb(86, 8, 103), rgb(42, 8, 121));
+          border: 2px;
+          border-color: rgb(85, 248, 229);
+          }
+          .btn-5:hover {
+            color:rgb(85, 248, 229);
+            background: transparent;
+             box-shadow:none;
+          }
+          .btn-5:before,
+          .btn-5:after{
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background: #f0094a;
+            box-shadow:
+             -1px -1px 5px 0px #fff,
+             7px 7px 20px 0px #0003,
+             4px 4px 5px 0px #0002;
+            transition:400ms ease all;
+          }
+          .btn-5:after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+          }
+          .btn-5:hover:before,
+          .btn-5:hover:after{
+            width:100%;
+            transition:800ms ease all;
+          }
+          .container{
+            display: flex;
+          }
+          .right{
+            width: 25%;
+            height: 450px;
+            margin-left: 180px;
+            margin-top: 100px;
+          }
+        img{
+            margin-top: 2px;
+            margin-left: 55px;
+        }
+        .right{
+            margin-top: 50px;
+            margin-left: 55px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Educational History</h1>
+    </nav>
+    <div class="container">
+        <ul>
+            <li><strong>Primary School:</strong> Lokmanya Vidhyalay Primary School, <br> Surat, Gujarat</li> 
+            <li>Complition in 2016</li> <br> <br>
+            <li><strong>SSC:</strong> Lokmanya Vidhyalay Secondary School, <br> Surat, Gujarat</li>
+            <li>Complition in 2018</li> <br> <br>
+            <li><strong>HSC:</strong> Lokmanya Vidhyalay Higher Secondary School (Science Stream) <br> Surat, Gujarat</li>
+            <li>Complition in 2020</li> <br> <br>
+            <li><strong>Undergraduation:</strong> Lokmanya Vidhyalay Secondary School, <br> Surat, Gujarat</li>
+            <li>Expected Graduation in 2024</li> <br>
+            <button onclick="window.location.href={%url 'HomePage' %}" class="custom-btn btn-5"><span>To Home</span></button>
+        </ul>
+        <div class="right">
+            <img src="edh.png" alt="Picture/logo">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Home Page</title>
+  <style>
+    html {
+      margin: 0%;
+      padding: 0%;
+      background-image: linear-gradient(to left, rgb(100, 10, 120), rgb(78, 29, 193));
+    }
+
+    nav {
+      background-color: black;
+      height: 75px;
+      align-items: left;
+      opacity: 70%;
+    }
+
+    nav li {
+      padding: 2px;
+      float: left;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      list-style: none;
+    }
+
+    nav ul {
+      overflow: auto;
+    }
+
+    nav li button {
+      border: none;
+      background-color: black;
+      color: rgb(255, 255, 255);
+      margin-top: 5px;
+    }
+
+    img {
+      height: 280px;
+      /* display: contents; */
+      margin-top: 110px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .middle {
+      display: flex;
+    }
+
+    .right {
+      width: 49%;
+    }
+
+    .left {
+      margin-top: 40px;
+      margin-left: 20px;
+      text-align: center;
+      font-size: 60px;
+      font-family: cursive;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <button onclick="window.location.href = {% url 'AboutMe' %}" name="AboutMe">About Me</button>
+      </li>
+      <li>
+        <button onclick="window.location.href = {% url 'Education' %}">Educational History</button>
+      </li>
+      <li>
+        <button onclick="window.location.href = {% url 'SocialMedia' %}">Social Media</button>
+      </li>
+      <li>
+        <button onclick="window.location.href = {% url 'Other' %}">Other Things</button>
+      </li>
+    </ul>
+  </nav>
+  <div class="middle">
+    <div class="left">
+      <p>"Don't Take A Break <br> Until You Break <br> Your Goal With Full Strentgh"</p>
+    </div>
+    <div class="right">
+      <img src="logo1.png" alt="A description of the gif">
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

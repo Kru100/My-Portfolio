@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>My Personal Information</title>
+    <style>
+        html {
+            background-image: linear-gradient(to right, rgb(100, 10, 120), rgb(78, 29, 193));
+        }
+
+        nav {
+            background-color: black;
+            height: 75px;
+            align-items: left;
+            opacity: 70%;
+            color: aliceblue;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        nav h1 {
+            padding-top: 10px;
+            font-family: cursive;
+        }
+        .left{
+            font-size: 20px;
+            color: rgb(85, 248, 229);
+            margin-top: 100px;
+            margin-left: 10px;
+            font-family: cursive;
+            font-size: 25px;
+        }
+        strong{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+        .btn-5 {
+            width: 130px;
+            height: 40px;
+            line-height: 42px;
+            padding: 0;
+            border: none;
+            font-size: 17px;
+            color: rgb(85, 248, 229);
+          background: linear-gradient(to left,rgb(86, 8, 103), rgb(42, 8, 121));
+          border: 2px;
+          border-color: rgb(85, 248, 229);
+          }
+          .btn-5:hover {
+            color:rgb(85, 248, 229);
+            background: transparent;
+             box-shadow:none;
+          }
+          .btn-5:before,
+          .btn-5:after{
+            content:'';
+            position:absolute;
+            top:0;
+            right:0;
+            height:2px;
+            width:0;
+            background: #f0094a;
+            box-shadow:
+             -1px -1px 5px 0px #fff,
+             7px 7px 20px 0px #0003,
+             4px 4px 5px 0px #0002;
+            transition:400ms ease all;
+          }
+          .btn-5:after{
+            right:inherit;
+            top:inherit;
+            left:0;
+            bottom:0;
+          }
+          .btn-5:hover:before,
+          .btn-5:hover:after{
+            width:100%;
+            transition:800ms ease all;
+          }
+          .container{
+            display: flex;
+          }
+          .right{
+            width: 25%;
+            height: 450px;
+            margin-left: 180px;
+            margin-top: 100px;
+          }
+          img{
+            height: 350px;
+          }
+          
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>My Personal Information</h1>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <strong>Name:</strong> Patel Krunal Maheshbhai<br> <br>
+            <strong>Address:</strong> Doniyafali, Morabhagal, Rander, Surat, Gujarat. <br> <br>
+            <strong>Pin-code Number:</strong> 395005 <br> <br>
+            <strong>Date of Birth:</strong> 15-05-2002<br> <br>
+            <strong>Specialty:</strong> C, C++, Python, HTML, CSS, Javascript, <br> Python, Django<br> <br>
+            <strong>Nationality:</strong> Indian<br> <br>
+            <button onclick="window.location.href={%url 'HomePage' %}" class="custom-btn btn-5"><span>To Home</span></button>
+        </div>
+        <div class="right">
+            <img src="prof.jpg" alt="Profile Pic">
+        </div>
+    </div>
+</body>
+
+</html>
