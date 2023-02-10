@@ -1,0 +1,5 @@
+This is my personal portfolio using HTML, CSS, JavaScript and django
+*****
+Main topic of this portfolio is that it will show my achievements and all social media links, 
+also my hobbies and my interest. 
+Also is will showcase some other pages of the interest like about my thoughts on something and all.
