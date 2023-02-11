@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html {
+            background-image: linear-gradient(to right, rgb(100, 10, 120), rgb(78, 29, 193));
+        }
+
         nav {
             background-color: black;
             height: 75px;
@@ -20,14 +25,11 @@
             padding-top: 10px;
             font-family: cursive;
         }
-        html {
-            background-image: linear-gradient(to right, rgb(100, 10, 120), rgb(78, 29, 193));
+
+        img {
+            height: 100px;
         }
 
-        p{
-            font-family: cursive;
-            font-size: 25px;
-        }
         .btn-5 {
             width: 130px;
             height: 40px;
@@ -36,71 +38,105 @@
             border: none;
             font-size: 17px;
             color: rgb(85, 248, 229);
-          background: linear-gradient(to left,rgb(86, 8, 103), rgb(42, 8, 121));
-          border: 2px;
-          border-color: rgb(85, 248, 229);
-          }
-          .btn-5:hover {
-            color:rgb(85, 248, 229);
+            background: linear-gradient(to left, rgb(86, 8, 103), rgb(42, 8, 121));
+            border: 2px;
+            border-color: rgb(85, 248, 229);
+        }
+
+        .btn-5:hover {
+            color: rgb(85, 248, 229);
             background: transparent;
-             box-shadow:none;
-          }
-          .btn-5:before,
-          .btn-5:after{
-            content:'';
-            position:absolute;
-            top:0;
-            right:0;
-            height:2px;
-            width:0;
+            box-shadow: none;
+        }
+
+        .btn-5:before,
+        .btn-5:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
             background: #f0094a;
             box-shadow:
-             -1px -1px 5px 0px #fff,
-             7px 7px 20px 0px #0003,
-             4px 4px 5px 0px #0002;
-            transition:400ms ease all;
-          }
-          .btn-5:after{
-            right:inherit;
-            top:inherit;
-            left:0;
-            bottom:0;
-          }
-          .btn-5:hover:before,
-          .btn-5:hover:after{
-            width:100%;
-            transition:800ms ease all;
-          }
-        .container{
+                -1px -1px 5px 0px #fff,
+                7px 7px 20px 0px #0003,
+                4px 4px 5px 0px #0002;
+            transition: 400ms ease all;
+        }
+
+        .btn-5:after {
+            right: inherit;
+            top: inherit;
+            left: 0;
+            bottom: 0;
+        }
+
+        .btn-5:hover:before,
+        .btn-5:hover:after {
+            width: 100%;
+            transition: 800ms ease all;
+        }
+
+        .container {
+            flex-direction: column;
+            flex-wrap: revert;
+            display: inline-flex;
+        }
+        .insta{
+            margin-left: 730px;
+            margin-top: 20px;
+        }
+        div.twitter{
+            margin-left: 720px;
+            margin-bottom: 20px;
+        }
+        div.email{
             display: flex;
+            flex-direction: row;
+            color: antiquewhite;
+            font-size: 20px;
+            margin-left: 730px;
+        }
+        div.email span{
+            margin-top: 35px;
+        }
+        div.github{
+            margin-left: 730px;
+        }
+        button{
+            margin-left: 720px;
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <nav>
-        <h1>My Life....</h1>
+        <h1>Contact Me Here</h1>
     </nav>
     <div class="container">
-        <div class="left">
-            <p>
-                Other than Developing, I like to read. <br> <br>
-                Write Fictional Novel's (Working on One) <br> <br>
-                Also Have a Daily Routin for my Body because <br> excersise make your day <br> <br>
-                I've many dreams, that I won't share, <br> when I acheive I'll publish here <br> <br>
-                I favor hip-hop songs more but also love to listen <br> melodic songs with beautiful guitar <br> <br>
-                I can't tell much about me but surely you'll <br> know me better if you interact <br> <br>
-                <button onclick="window.location.href={%url 'HomePage' %}" class="custom-btn btn-5"><span>To Home</span></button>
-            </p>
+        <div class="insta">
+            <a href="https://www.instagram.com/1.5_o5/"><img src="{% static 'insta.png' %}" alt="Instagram"></a>
         </div>
-        <!-- <div class="right">
-            <input type="text" id="input"> <br>
-            Know your fortune...
-            <button class="submit"></button>
-        </div> -->
+        <div class="twitter">
+            <a href="https://www.twitter.com/Krunal__1526/"><img src="{% static 'twitter.png' %}"alt="twitter"></a>
+        </div>
+        <div class="email">
+            <img src="{% static 'email.png' %}" alt="Gmail" onclick="javascript:MyEmail();">
+            <span id="email"></span>
+        </div>
+        <div class="github">
+            <a href="https://github.com/Kru100"><img src="{% static 'github.png' %}" alt="GitHub"></a>
+        </div>
+        <button <button onclick="window.location.href = {% url 'back' %}" class="custom-btn btn-5"><span>To Home</span></button>
     </div>
-    <!-- <script>
-        let string;
-        
-    </script> -->
 </body>
+<script>
+    function MyEmail() {
+        let str = "www.kp1584085@gmail.com";
+        email.innerHTML = str;
+    }
+</script>
+
 </html>

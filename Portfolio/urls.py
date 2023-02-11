@@ -22,5 +22,6 @@ urlpatterns = [
     path('AboutMe/',views.AboutMe, name='AboutMe'),
     path('Education/',views.EducationHistory,name='Education'),
     path('Social/',views.SocialMedia,name='SocialMedia'),
-    path('Others/',views.Otherthings,name='Other')
+    path('Others/',views.Otherthings,name='Other'),
+    path('back/',views.HomePage,name='back')
 ]
