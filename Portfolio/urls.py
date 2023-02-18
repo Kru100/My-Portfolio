@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Portfolio import views
+from django.conf.urls.static import static
+from Portfolio import settings
 
 urlpatterns = [
     path('',views.HomePage,name='HomePage'),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('Social/',views.SocialMedia,name='SocialMedia'),
     path('Others/',views.Otherthings,name='Other'),
     path('back/',views.HomePage,name='back')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

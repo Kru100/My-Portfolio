@@ -108,7 +108,8 @@
             <button onclick="window.location.href = {% url 'back' %}" class="custom-btn btn-5"><span>To Home</span></button>
         </div>
         <div class="right">
-            <img src="prof.jpg" alt="Profile Pic">
+                {% load static %}
+                <img src="{%static 'images/prof.jpg'%}" alt="Profile Pic">
         </div>
     </div>
 </body>

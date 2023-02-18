@@ -116,18 +116,19 @@
         <h1>Contact Me Here</h1>
     </nav>
     <div class="container">
+        {%load static %}
         <div class="insta">
-            <a href="https://www.instagram.com/1.5_o5/"><img src="{% static 'insta.png' %}" alt="Instagram"></a>
+            <a href="https://www.instagram.com/1.5_o5/"><img src="{% static 'images/insta.png' %}" alt="Instagram"></a>
         </div>
         <div class="twitter">
-            <a href="https://www.twitter.com/Krunal__1526/"><img src="{% static 'twitter.png' %}"alt="twitter"></a>
+            <a href="https://www.twitter.com/Krunal__1526/"><img src="{% static 'images/twitter.png' %}"alt="twitter"></a>
         </div>
         <div class="email">
-            <img src="{% static 'email.png' %}" alt="Gmail" onclick="javascript:MyEmail();">
+            <img src="{% static 'images/email.png' %}" alt="Gmail" onclick="javascript:MyEmail();">
             <span id="email"></span>
         </div>
         <div class="github">
-            <a href="https://github.com/Kru100"><img src="{% static 'github.png' %}" alt="GitHub"></a>
+            <a href="https://github.com/Kru100"><img src="{% static 'images/github.png' %}" alt="GitHub"></a>
         </div>
         <button <button onclick="window.location.href = {% url 'back' %}" class="custom-btn btn-5"><span>To Home</span></button>
     </div>
